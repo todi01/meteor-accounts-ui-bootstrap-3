@@ -209,7 +209,7 @@
     Template._loginButtonsLoggedOutPasswordService.fields = function() {
         var loginFields = [{
             fieldName: 'username-or-email',
-            fieldLabel: 'Username or Email',
+            fieldLabel: i18n("LOGIN.USERNAME_OR_EMAIL"),
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
@@ -217,20 +217,20 @@
             }
         }, {
             fieldName: 'username',
-            fieldLabel: 'Username',
+            fieldLabel: i18n("LOGIN.USERNAME"),
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
             }
         }, {
             fieldName: 'email',
-            fieldLabel: 'Email',
+            fieldLabel: i18n("LOGIN.EMAIL"),
             inputType: 'email',
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "EMAIL_ONLY";
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'Password',
+            fieldLabel: i18n("LOGIN.PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
@@ -239,7 +239,7 @@
 
         var signupFields = [{
             fieldName: 'username',
-            fieldLabel: 'Username',
+            fieldLabel: i18n("LOGIN.SIGNUP_USERNAME"),
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
@@ -247,7 +247,7 @@
             }
         }, {
             fieldName: 'email',
-            fieldLabel: 'Email',
+            fieldLabel: i18n("LOGIN.SIGNUP_EMAIL"),
             inputType: 'email',
             visible: function() {
                 return _.contains(
@@ -256,21 +256,21 @@
             }
         }, {
             fieldName: 'email',
-            fieldLabel: 'Email (optional)',
+            fieldLabel: i18n("LOGIN.SIGNUP_EMAIL_OPTIONAL"),
             inputType: 'email',
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'Password',
+            fieldLabel: i18n("LOGIN.SIGNUP_PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: 'Password (again)',
+            fieldLabel: i18n("LOGIN.SIGNUP_PASSWORD_CONFIRM"),
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -332,21 +332,21 @@
     Template._loginButtonsChangePassword.fields = function() {
         return [{
             fieldName: 'old-password',
-            fieldLabel: 'Current Password',
+            fieldLabel: i18n("LOGIN.CURRENT_PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password',
-            fieldLabel: 'New Password',
+            fieldLabel: i18n("LOGIN.NEW_PASSWORD"),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: 'New Password (again)',
+            fieldLabel: i18n("LOGIN.NEW_PASSWORD_AGAIN"),
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -424,7 +424,7 @@
 
         Meteor.loginWithPassword(loginSelector, password, function(error, result) {
             if (error) {
-                loginButtonsSession.errorMessage(error.reason || "Unknown error");
+                loginButtonsSession.errorMessage(error.reason || i18n("LOGIN.ERROR_UNKNOWN"));
             } else {
                 loginButtonsSession.closeDropdown();
             }
@@ -495,7 +495,7 @@
 
         Accounts.createUser(options, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(error.reason || "Unknown error");
+                loginButtonsSession.errorMessage(error.reason || i18n("LOGIN.ERROR_UNKNOWN"));
             } else {
                 loginButtonsSession.closeDropdown();
             }
@@ -511,12 +511,12 @@
                 email: email
             }, function(error) {
                 if (error)
-                    loginButtonsSession.errorMessage(error.reason || "Unknown error");
+                    loginButtonsSession.errorMessage(error.reason || i18n("LOGIN.ERROR_UNKNOWN"));
                 else
-                    loginButtonsSession.infoMessage("Email sent");
+                    loginButtonsSession.infoMessage(i18n("LOGIN.INFO_EMAIL_SENT"));
             });
         } else {
-            loginButtonsSession.infoMessage("Email sent");
+            loginButtonsSession.infoMessage(i18n("LOGIN.INFO_EMAIL_SENT"));
         }
     };
 
@@ -536,9 +536,9 @@
 
         Accounts.changePassword(oldPassword, password, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(error.reason || "Unknown error");
+                loginButtonsSession.errorMessage(error.reason || i18n("LOGIN.ERROR_UNKNOWN"));
             } else {
-                loginButtonsSession.infoMessage("Password changed");
+                loginButtonsSession.infoMessage(i18n("LOGIN.INFO_PASSWORD_CHANGED"));
 
                 // wait 3 seconds, then expire the msg
                 Meteor.setTimeout(function() {
@@ -555,7 +555,7 @@
             // notably not trimmed. a password could (?) start or end with a space
             var password = elementValueById('login-password');
             if (password !== passwordAgain) {
-                loginButtonsSession.errorMessage("Passwords don't match");
+                loginButtonsSession.errorMessage(i18n("LOGIN.ERROR_PASSWORDS_DONT_MATCH"));
                 return false;
             }
         }

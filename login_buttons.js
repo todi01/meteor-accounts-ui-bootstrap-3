@@ -134,7 +134,7 @@
         if (username.length >= 3) {
             return true;
         } else {
-            loginButtonsSession.errorMessage("Username must be at least 3 characters long");
+            loginButtonsSession.errorMessage(i18n("LOGIN.USERNAME_AT_LEAST_3_CHARS"));
             return false;
         }
     };
@@ -147,7 +147,7 @@
         if (re.test(email)) {
             return true;
         } else {
-            loginButtonsSession.errorMessage("Invalid email");
+            loginButtonsSession.errorMessage(i18n("LOGIN.INVALID_EMAIL"));
             return false;
         }
     };
@@ -155,7 +155,7 @@
         if (password.length >= 6) {
             return true;
         } else {
-            loginButtonsSession.errorMessage("Password must be at least 6 characters long");
+            loginButtonsSession.errorMessage(i18n("LOGIN.PASSWORD_AT_LEAST_6_CHARS"));
             return false;
         }
     };

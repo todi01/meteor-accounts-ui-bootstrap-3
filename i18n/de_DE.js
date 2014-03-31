@@ -28,7 +28,7 @@ i18n.map('de_DE', {
         NO_SERVICES_CONFIGURED: 'Es sind keine Login-Dienste konfiguriert',
         DISMISS: 'Schließen',
         SIGNUP_USERNAME: 'Benutzername mind. 3 Zeichen',
-        SIGNUP_PASSWORD: 'Password mind. 6 Zeichen',
+        SIGNUP_PASSWORD: 'Passwort mind. 6 Zeichen',
         SIGNUP_PASSWORD_CONFIRM: 'Passwort (Wiederholung)',
         SIGNUP_EMAIL: 'E-Mail',
         SIGNUP_EMAIL_OPTIONAL: 'E-Mail (optional)',
@@ -39,5 +39,27 @@ i18n.map('de_DE', {
         ERROR_USERNAME_AT_LEAST_3_CHARS: 'Benutzername muss mindestens 3 Zeichen lang sein',
         ERROR_INVALID_EMAIL: 'E-Mail-Adresse ungültig',
         ERROR_PASSWORD_AT_LEAST_6_CHARS: 'Passwort muss mindestens 6 Zeichen lang sein',
-    }
+    },
+    'User not found': 'Unbekannter Benutzer',
+    'User has no password set': 'Benutzer hat kein Passwort',
+    'Incorrect password': 'Passwort falsch',
+    'Username already exists.': 'Benutzername exitiert bereits',
+    'Must be logged in': 'Sie müssen angemeldet sein',
+    'Token expired': 'Token abgelaufen',
+    'Token has invalid email address': 'Token hat ungültige E-Mail-Adresse',
+    'Invalid email': 'Ungültige E-Mail-Adresse',
+    'Verify email link expired': 'Link zur Bestätigung der E-Mail-Adresse ist nicht mehr gültig',
+    'Verify email link is for unknown address': 'Link zur Bestätigung der E-Mail-Adresse ist für unbekannte E-Mail-Adresse',
+    'Signups forbidden': 'Neuregistrierungen sind nicht möglich',
+
+    'Login forbidden': 'Login ist nicht möglich',
+    'You\'ve been logged out by the server. Please log in again.': 'Sie wurden automatisch abgemeldet. Bitte melden Sie sich erneut an.'
+    'Your session has expired. Please log in again.': 'Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.',
+    'User validation failed': 'Verifizierung des Benutzers fehlgeschlagen',
+    'Email already exists.': 'E-Mail-Adresse existiert bereits',
+    'Username already exists.': 'Benutzername existiert bereits',
+    //@ + domain + email required
+    'Email doesn\'t match the criteria.': 'E-Mail-Adresse entspricht nicht den Vorgaben',
+    'Service unknown': 'Unbekannter Dienst',
+    //Service ... already configured
 });

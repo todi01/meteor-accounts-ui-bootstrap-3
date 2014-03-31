@@ -14,7 +14,7 @@
         } else if (err instanceof Accounts.ConfigError) {
           loginButtonsSession.configureService(serviceName);
         } else {
-          loginButtonsSession.errorMessage(err.reason || i18n('LOGIN.ERROR_UNKNOWN'));
+          loginButtonsSession.errorMessage(i18n(err.reason) || err.reason || i18n('LOGIN.ERROR_UNKNOWN'));
         }
       };
 

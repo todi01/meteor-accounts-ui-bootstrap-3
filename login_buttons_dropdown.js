@@ -424,7 +424,7 @@
 
         Meteor.loginWithPassword(loginSelector, password, function(error, result) {
             if (error) {
-                loginButtonsSession.errorMessage(error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
             } else {
                 loginButtonsSession.closeDropdown();
             }
@@ -495,7 +495,7 @@
 
         Accounts.createUser(options, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
             } else {
                 loginButtonsSession.closeDropdown();
             }
@@ -511,7 +511,7 @@
                 email: email
             }, function(error) {
                 if (error)
-                    loginButtonsSession.errorMessage(error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
+                    loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
                 else
                     loginButtonsSession.infoMessage(i18n('LOGIN.INFO_EMAIL_SENT'));
             });
@@ -536,7 +536,7 @@
 
         Accounts.changePassword(oldPassword, password, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('LOGIN.ERROR_UNKNOWN'));
             } else {
                 loginButtonsSession.infoMessage(i18n('LOGIN.INFO_PASSWORD_CHANGED'));
 

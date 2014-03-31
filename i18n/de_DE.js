@@ -1,5 +1,5 @@
-/**de-DE**/
-i18n.map('de-DE', {
+/**de_DE**/
+i18n.map('de_DE', {
     LOGIN: {
         CHANGE_PASSWORD: 'Passwort ändern',
         SIGN_OUT: 'Abmelden',

@@ -23,8 +23,8 @@ Package.on_use(function (api) {
     'login_buttons_dropdown.js',
     'login_buttons_dialogs.js',
     'accounts_ui.styl',
-    'i18n/en-US.js',
-    'i18n/de-DE.js',
+    'i18n/en_US.js',
+    'i18n/de_DE.js',
     ], 'client');
 });
 

@@ -53,13 +53,11 @@ i18n.map('de_DE', {
     'Signups forbidden': 'Neuregistrierungen sind nicht möglich',
 
     'Login forbidden': 'Login ist nicht möglich',
-    'You\'ve been logged out by the server. Please log in again.': 'Sie wurden automatisch abgemeldet. Bitte melden Sie sich erneut an.'
+    'You\'ve been logged out by the server. Please log in again.': 'Sie wurden automatisch abgemeldet. Bitte melden Sie sich erneut an.',
     'Your session has expired. Please log in again.': 'Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.',
     'User validation failed': 'Verifizierung des Benutzers fehlgeschlagen',
     'Email already exists.': 'E-Mail-Adresse existiert bereits',
     'Username already exists.': 'Benutzername existiert bereits',
-    //@ + domain + email required
     'Email doesn\'t match the criteria.': 'E-Mail-Adresse entspricht nicht den Vorgaben',
     'Service unknown': 'Unbekannter Dienst',
-    //Service ... already configured
 });

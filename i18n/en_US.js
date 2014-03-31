@@ -1,6 +1,6 @@
 /**en_US**/
 i18n.map('en_US', {
-    LOGIN: {
+    ACCOUNTSUI: {
         CHANGE_PASSWORD: 'Change password',
         SIGN_OUT: 'Sign out',
         SIGN_IN_WITH: 'Sign in with',

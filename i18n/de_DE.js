@@ -1,19 +1,19 @@
 /**de_DE**/
 i18n.map('de_DE', {
-    LOGIN: {
+    ACCOUNTSUI: {
         CHANGE_PASSWORD: 'Passwort ändern',
         SIGN_OUT: 'Abmelden',
         SIGN_IN_WITH: 'Anmelden mit',
         CONFIGURE: 'Konfigurieren',
         SIGN_IN: 'Anmelden',
-        SIGN_UP: 'Registrien',
+        SIGN_UP: 'Registrieren',
         OR: 'oder',
         RESET_PASSWORD: 'Passwort zurücksetzen',
         CANCEL: 'Abbrechen',
         CLOSE: 'Schließen',
-        RESET_YOUR_PASSWORD: 'Setzen sie ihr Passwort zurück',
-        CHOOSE_A_PASSWORD: 'Wählen sie ein Passwort',
-        SET_A_PASSWORD: 'Setzen sie ein Passwort',
+        RESET_YOUR_PASSWORD: 'Setzen Sie Ihr Passwort zurück',
+        CHOOSE_A_PASSWORD: 'Wählen Sie ein Passwort',
+        SET_A_PASSWORD: 'Setzen Sie ein Passwort',
         NEW_PASSWORD: 'Neues Passwort',
         EMAIL_VERIFIED: 'E-Mail-Adresse verifiziert',
         FORGOT_PASSWORD_QUESTION: 'Passwort vergessen?',

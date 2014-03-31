@@ -35,7 +35,7 @@ i18n.map('en-US', {
         INFO_EMAIL_SENT: 'Email sent',
         INFO_PASSWORD_CHANGED: 'Password changed',
         ERROR_UNKNOWN: 'Unknown error',
-        ERROR_PASSWORDS_DONT_MATCH: 'Passwords don\'t match'
+        ERROR_PASSWORDS_DONT_MATCH: 'Passwords don\'t match',
         ERROR_USERNAME_AT_LEAST_3_CHARS: 'Username must be at least 3 characters long',
         ERROR_INVALID_EMAIL: 'Invalid email',
         ERROR_PASSWORD_AT_LEAST_6_CHARS: 'Password must be at least 6 characters long',

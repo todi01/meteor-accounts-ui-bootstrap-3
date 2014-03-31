@@ -27,10 +27,10 @@
   {{/if}}
 
   {{#if allowChangingPassword}}
-    <button class="btn btn-default btn-block" id="login-buttons-open-change-password">{{i18n 'ACCOUNTSUI.CHANGE_PASSWORD'}}</button>
+    <button class="btn btn-default btn-block" id="login-buttons-open-change-password">{{i18n 'ACCOUNTS_UI.CHANGE_PASSWORD'}}</button>
   {{/if}}
 
-  <button class="btn btn-block btn-primary" id="login-buttons-logout">{{i18n 'ACCOUNTSUI.SIGN_OUT'}}</button>
+  <button class="btn btn-block btn-primary" id="login-buttons-logout">{{i18n 'ACCOUNTS_UI.SIGN_OUT'}}</button>
 </template>
 
 <!--            -->
@@ -39,7 +39,7 @@
 <template name="_loginButtonsLoggedOutDropdown">
   <li id="login-dropdown-list" class="dropdown">
     <a class="dropdown-toggle"  data-toggle="dropdown">
-      {{i18n 'ACCOUNTSUI.SIGN_IN'}}{{#unless forbidClientAccountCreation}} / {{i18n 'ACCOUNTSUI.SIGN_UP'}}{{/unless}}
+      {{i18n 'ACCOUNTS_UI.SIGN_IN'}}{{#unless forbidClientAccountCreation}} / {{i18n 'ACCOUNTS_UI.SIGN_UP'}}{{/unless}}
       <b class="caret"></b>
     </a>
     <div class="dropdown-menu">
@@ -67,7 +67,7 @@
 <template name="_loginButtonsLoggedOutPasswordServiceSeparator">
   <div class="or">
     <span class="hline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <span class="or-text">{{i18n 'ACCOUNTSUI.OR'}}</span>
+    <span class="or-text">{{i18n 'ACCOUNTS_UI.OR'}}</span>
     <span class="hline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
   </div>
 </template>
@@ -82,18 +82,18 @@
     {{/each}}
     <button class="btn btn-primary col-sm-12" id="login-buttons-password" type="button">
       {{#if inSignupFlow}}
-        {{i18n 'ACCOUNTSUI.CREATE'}}
+        {{i18n 'ACCOUNTS_UI.CREATE'}}
       {{else}}
-        {{i18n 'ACCOUNTSUI.SIGN_IN'}}
+        {{i18n 'ACCOUNTS_UI.SIGN_IN'}}
       {{/if}}
     </button>
     {{#if inLoginFlow}}
       <div id="login-other-options">
       {{#if showForgotPasswordLink}}
-        <a id="forgot-password-link" class="pull-left" >{{i18n 'ACCOUNTSUI.FORGOT_PASSWORD_QUESTION'}}</a>
+        <a id="forgot-password-link" class="pull-left" >{{i18n 'ACCOUNTS_UI.FORGOT_PASSWORD_QUESTION'}}</a>
       {{/if}}
       {{#if showCreateAccountLink}}
-        <a id="signup-link" class="pull-right" >{{i18n 'ACCOUNTSUI.CREATE_ACCOUNT'}}</a>
+        <a id="signup-link" class="pull-right" >{{i18n 'ACCOUNTS_UI.CREATE_ACCOUNT'}}</a>
       {{/if}}
       </div>
     {{/if}}
@@ -107,15 +107,15 @@
   <div class="login-form">
     {{> _loginButtonsMessages}}
     <div id="forgot-password-email-label-and-input"> {{! XXX we should probably use loginButtonsFormField }}
-      <input id="forgot-password-email" type="email" placeholder="{{i18n 'ACCOUNTSUI.EMAIL'}}" class="form-control" />
+      <input id="forgot-password-email" type="email" placeholder="{{i18n 'ACCOUNTS_UI.EMAIL'}}" class="form-control" />
     </div>
-    <button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">{{i18n 'ACCOUNTSUI.RESET_PASSWORD'}}</button>
+    <button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">{{i18n 'ACCOUNTS_UI.RESET_PASSWORD'}}</button>
     {{> _loginButtonsBackToLoginLink}}
   </div>
 </template>
 
 <template name="_loginButtonsBackToLoginLink">
-    <button id="back-to-login-link" class="btn btn-default col-sm-12">{{i18n 'ACCOUNTSUI.CANCEL'}}</button>
+    <button id="back-to-login-link" class="btn btn-default col-sm-12">{{i18n 'ACCOUNTS_UI.CANCEL'}}</button>
 </template>
 
 <template name="_loginButtonsFormField">
@@ -129,6 +129,6 @@
   {{#each fields}}
     {{> _loginButtonsFormField}}
   {{/each}}
-  <button class="btn btn-primary" id="login-buttons-do-change-password">{{i18n 'ACCOUNTSUI.CHANGE_PASSWORD'}}</button>
-  <button class="btn btn-default login-close">{{i18n 'ACCOUNTSUI.CLOSE'}}</button>
+  <button class="btn btn-primary" id="login-buttons-do-change-password">{{i18n 'ACCOUNTS_UI.CHANGE_PASSWORD'}}</button>
+  <button class="btn btn-default login-close">{{i18n 'ACCOUNTS_UI.CLOSE'}}</button>
 </template>

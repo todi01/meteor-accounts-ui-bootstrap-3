@@ -1,6 +1,6 @@
 /**de_DE**/
 i18n.map('de_DE', {
-    ACCOUNTSUI: {
+    ACCOUNTS_UI: {
         CHANGE_PASSWORD: 'Passwort ändern',
         SIGN_OUT: 'Abmelden',
         SIGN_IN_WITH: 'Anmelden mit',

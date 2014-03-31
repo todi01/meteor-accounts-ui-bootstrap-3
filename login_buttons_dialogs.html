@@ -15,16 +15,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">{{i18n 'ACCOUNTSUI.RESET_YOUR_PASSWORD'}}</h4>
+            <h4 class="modal-title">{{i18n 'ACCOUNTS_UI.RESET_YOUR_PASSWORD'}}</h4>
           </div>
           <div class="modal-body">
-            <input id="reset-password-new-password" class="form-control" type="password" placeholder="{{i18n 'ACCOUNTSUI.NEW_PASSWORD'}}"/>
+            <input id="reset-password-new-password" class="form-control" type="password" placeholder="{{i18n 'ACCOUNTS_UI.NEW_PASSWORD'}}"/>
             {{> _loginButtonsMessages}}
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" id="login-buttons-cancel-reset-password">{{i18n 'ACCOUNTSUI.ClOSE'}}</a>
+            <a class="btn btn-default" id="login-buttons-cancel-reset-password">{{i18n 'ACCOUNTS_UI.ClOSE'}}</a>
             <button class="btn btn-primary" id="login-buttons-reset-password-button">
-              {{i18n 'ACCOUNTSUI.SET_A_PASSWORD'}}
+              {{i18n 'ACCOUNTS_UI.SET_A_PASSWORD'}}
             </button>
           </div>
         </div><!-- /.modal-content -->
@@ -40,16 +40,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">{{i18n 'ACCOUNTSUI.CHOOSE_A_PASSWORD'}}</h4>
+            <h4 class="modal-title">{{i18n 'ACCOUNTS_UI.CHOOSE_A_PASSWORD'}}</h4>
           </div>
           <div class="modal-body">
-            <input id="enroll-account-password" class="form-control" type="password" placeholder="{{i18n 'ACCOUNTSUI.NEW_PASSWORD'}}" />
+            <input id="enroll-account-password" class="form-control" type="password" placeholder="{{i18n 'ACCOUNTS_UI.NEW_PASSWORD'}}" />
             {{> _loginButtonsMessages}}
           </div>
           <div class="modal-footer">
-            <a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">{{i18n 'ACCOUNTSUI.ClOSE'}}</a>
+            <a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">{{i18n 'ACCOUNTS_UI.ClOSE'}}</a>
             <button class="btn btn-primary" id="login-buttons-enroll-account-button">
-              {{i18n 'ACCOUNTSUI.SET_A_PASSWORD'}}
+              {{i18n 'ACCOUNTS_UI.SET_A_PASSWORD'}}
             </button>
           </div>
         </div><!-- /.modal-content -->
@@ -61,8 +61,8 @@
 <template name="_justVerifiedEmailDialog">
   {{#if visible}}
     <div class="accounts-dialog accounts-centered-dialog">
-      {{i18n 'ACCOUNTSUI.EMAIL_VERIFIED'}}
-      <div class="login-button" id="just-verified-dismiss-button">{{i18n 'ACCOUNTSUI.DISMISS'}}</div>
+      {{i18n 'ACCOUNTS_UI.EMAIL_VERIFIED'}}
+      <div class="login-button" id="just-verified-dismiss-button">{{i18n 'ACCOUNTS_UI.DISMISS'}}</div>
     </div>
   {{/if}}
 </template>
@@ -121,7 +121,7 @@
   {{#if visible}}
     <div class="accounts-dialog accounts-centered-dialog" id="login-buttons-message-dialog">
       {{> _loginButtonsMessages}}
-      <div class="login-button" id="messages-dialog-dismiss-button"> {{i18n 'ACCOUNTSUI.DISMISS'}}</div>
+      <div class="login-button" id="messages-dialog-dismiss-button"> {{i18n 'ACCOUNTS_UI.DISMISS'}}</div>
     </div>
   {{/if}}
 </template>

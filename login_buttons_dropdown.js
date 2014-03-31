@@ -208,7 +208,7 @@
     Template._loginButtonsLoggedOutPasswordService.fields = function() {
         var loginFields = [{
             fieldName: 'username-or-email',
-            fieldLabel: i18n('ACCOUNTSUI.USERNAME_OR_EMAIL'),
+            fieldLabel: i18n('ACCOUNTS_UI.USERNAME_OR_EMAIL'),
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
@@ -216,20 +216,20 @@
             }
         }, {
             fieldName: 'username',
-            fieldLabel: i18n('ACCOUNTSUI.USERNAME'),
+            fieldLabel: i18n('ACCOUNTS_UI.USERNAME'),
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
             }
         }, {
             fieldName: 'email',
-            fieldLabel: i18n('ACCOUNTSUI.EMAIL'),
+            fieldLabel: i18n('ACCOUNTS_UI.EMAIL'),
             inputType: 'email',
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "EMAIL_ONLY";
             }
         }, {
             fieldName: 'password',
-            fieldLabel: i18n('ACCOUNTSUI.PASSWORD'),
+            fieldLabel: i18n('ACCOUNTS_UI.PASSWORD'),
             inputType: 'password',
             visible: function() {
                 return true;
@@ -238,7 +238,7 @@
 
         var signupFields = [{
             fieldName: 'username',
-            fieldLabel: i18n('ACCOUNTSUI.SIGNUP_USERNAME'),
+            fieldLabel: i18n('ACCOUNTS_UI.SIGNUP_USERNAME'),
             visible: function() {
                 return _.contains(
                     ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
@@ -246,7 +246,7 @@
             }
         }, {
             fieldName: 'email',
-            fieldLabel: i18n('ACCOUNTSUI.SIGNUP_EMAIL'),
+            fieldLabel: i18n('ACCOUNTS_UI.SIGNUP_EMAIL'),
             inputType: 'email',
             visible: function() {
                 return _.contains(
@@ -255,21 +255,21 @@
             }
         }, {
             fieldName: 'email',
-            fieldLabel: i18n('ACCOUNTSUI.SIGNUP_EMAIL_OPTIONAL'),
+            fieldLabel: i18n('ACCOUNTS_UI.SIGNUP_EMAIL_OPTIONAL'),
             inputType: 'email',
             visible: function() {
                 return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
             }
         }, {
             fieldName: 'password',
-            fieldLabel: i18n('ACCOUNTSUI.SIGNUP_PASSWORD'),
+            fieldLabel: i18n('ACCOUNTS_UI.SIGNUP_PASSWORD'),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: i18n('ACCOUNTSUI.SIGNUP_PASSWORD_CONFIRM'),
+            fieldLabel: i18n('ACCOUNTS_UI.SIGNUP_PASSWORD_CONFIRM'),
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -331,21 +331,21 @@
     Template._loginButtonsChangePassword.fields = function() {
         return [{
             fieldName: 'old-password',
-            fieldLabel: i18n('ACCOUNTSUI.CURRENT_PASSWORD'),
+            fieldLabel: i18n('ACCOUNTS_UI.CURRENT_PASSWORD'),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password',
-            fieldLabel: i18n('ACCOUNTSUI.NEW_PASSWORD'),
+            fieldLabel: i18n('ACCOUNTS_UI.NEW_PASSWORD'),
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: i18n('ACCOUNTSUI.NEW_PASSWORD_AGAIN'),
+            fieldLabel: i18n('ACCOUNTS_UI.NEW_PASSWORD_AGAIN'),
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -423,7 +423,7 @@
 
         Meteor.loginWithPassword(loginSelector, password, function(error, result) {
             if (error) {
-                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTSUI.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));
             } else {
                 loginButtonsSession.closeDropdown();
             }
@@ -494,7 +494,7 @@
 
         Accounts.createUser(options, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTSUI.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));
             } else {
                 loginButtonsSession.closeDropdown();
             }
@@ -510,12 +510,12 @@
                 email: email
             }, function(error) {
                 if (error)
-                    loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTSUI.ERROR_UNKNOWN'));
+                    loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));
                 else
-                    loginButtonsSession.infoMessage(i18n('ACCOUNTSUI.INFO_EMAIL_SENT'));
+                    loginButtonsSession.infoMessage(i18n('ACCOUNTS_UI.INFO_EMAIL_SENT'));
             });
         } else {
-            loginButtonsSession.infoMessage(i18n('ACCOUNTSUI.INFO_EMAIL_SENT'));
+            loginButtonsSession.infoMessage(i18n('ACCOUNTS_UI.INFO_EMAIL_SENT'));
         }
     };
 
@@ -535,9 +535,9 @@
 
         Accounts.changePassword(oldPassword, password, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTSUI.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));
             } else {
-                loginButtonsSession.infoMessage(i18n('ACCOUNTSUI.INFO_PASSWORD_CHANGED'));
+                loginButtonsSession.infoMessage(i18n('ACCOUNTS_UI.INFO_PASSWORD_CHANGED'));
 
                 // wait 3 seconds, then expire the msg
                 Meteor.setTimeout(function() {
@@ -554,7 +554,7 @@
             // notably not trimmed. a password could (?) start or end with a space
             var password = elementValueById('login-password');
             if (password !== passwordAgain) {
-                loginButtonsSession.errorMessage(i18n('ACCOUNTSUI.ERROR_PASSWORDS_DONT_MATCH'));
+                loginButtonsSession.errorMessage(i18n('ACCOUNTS_UI.ERROR_PASSWORDS_DONT_MATCH'));
                 return false;
             }
         }

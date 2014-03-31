@@ -29,7 +29,7 @@ i18n.map('en_US', {
         DISMISS: 'Dismiss',
         SIGNUP_USERNAME: 'Username',
         SIGNUP_PASSWORD: 'Password',
-        SIGNUP_PASSWORD_AGAIN: 'Password (again)',
+        SIGNUP_PASSWORD_CONFIRM: 'Password (again)',
         SIGNUP_EMAIL: 'Email',
         SIGNUP_EMAIL_OPTIONAL: 'Email (optional)',
         INFO_EMAIL_SENT: 'Email sent',

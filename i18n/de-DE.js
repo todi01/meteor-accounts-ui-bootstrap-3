@@ -26,9 +26,6 @@ i18n.map('de-DE', {
         CURRENT_PASSWORD: 'Aktuelles Passwort',
         NEW_PASSWORD_AGAIN: 'Neues Passwort (Wiederholung)',
         NO_SERVICES_CONFIGURED: 'Es sind keine Login-Dienste konfiguriert',
-        USERNAME_AT_LEAST_3_CHARS: 'Benutzername muss mindestens 3 Zeichen lang sein',
-        INVALID_EMAIL: 'E-Mail-Adresse ungültig',
-        PASSWORD_AT_LEAST_6_CHARS: 'Passwort muss mindestens 6 Zeichen lang sein',
         DISMISS: 'Schließen',
         SIGNUP_USERNAME: 'Benutzername mind. 3 Zeichen',
         SIGNUP_PASSWORD: 'Password mind. 6 Zeichen',
@@ -39,5 +36,8 @@ i18n.map('de-DE', {
         INFO_PASSWORD_CHANGED: 'Passwort geändert',
         ERROR_UNKNOWN: 'Unbekannter Fehler',
         ERROR_PASSWORDS_DONT_MATCH: 'Passwörter stimmen nicht überein'
+        ERROR_USERNAME_AT_LEAST_3_CHARS: 'Benutzername muss mindestens 3 Zeichen lang sein',
+        ERROR_INVALID_EMAIL: 'E-Mail-Adresse ungültig',
+        ERROR_PASSWORD_AT_LEAST_6_CHARS: 'Passwort muss mindestens 6 Zeichen lang sein',
     }
 });

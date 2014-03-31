@@ -26,9 +26,6 @@ i18n.map('en-US', {
         CURRENT_PASSWORD: 'Current Password',
         NEW_PASSWORD_AGAIN: 'New Password (again)',
         NO_SERVICES_CONFIGURED: 'No login services configured',
-        USERNAME_AT_LEAST_3_CHARS: 'Username must be at least 3 characters long',
-        INVALID_EMAIL: 'Invalid email',
-        PASSWORD_AT_LEAST_6_CHARS: 'Password must be at least 6 characters long',
         DISMISS: 'Dismiss',
         SIGNUP_USERNAME: 'Username',
         SIGNUP_PASSWORD: 'Password',
@@ -39,5 +36,8 @@ i18n.map('en-US', {
         INFO_PASSWORD_CHANGED: 'Password changed',
         ERROR_UNKNOWN: 'Unknown error',
         ERROR_PASSWORDS_DONT_MATCH: 'Passwords don\'t match'
+        ERROR_USERNAME_AT_LEAST_3_CHARS: 'Username must be at least 3 characters long',
+        ERROR_INVALID_EMAIL: 'Invalid email',
+        ERROR_PASSWORD_AT_LEAST_6_CHARS: 'Password must be at least 6 characters long',
     }
 });

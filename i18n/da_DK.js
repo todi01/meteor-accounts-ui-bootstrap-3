@@ -16,7 +16,7 @@ i18n.map('da_DK', {
         SET_A_PASSWORD: 'Sæt en adgangskode',
         NEW_PASSWORD: 'Ny adgangskode',
         EMAIL_VERIFIED: 'Email verificeret',
-        FORGOT_PASSWORD_QUESTION: 'Glemt adgangskode?',l
+        FORGOT_PASSWORD_QUESTION: 'Glemt adgangskode?',
         CREATE_ACCOUNT: 'Opret konto',
         USERNAME_OR_EMAIL: 'Brugernavn eller email',
         USERNAME: 'Brugernavn',

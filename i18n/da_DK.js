@@ -16,7 +16,7 @@ i18n.map('da_DK', {
         SET_A_PASSWORD: 'Sæt en adgangskode',
         NEW_PASSWORD: 'Ny adgangskode',
         EMAIL_VERIFIED: 'Email verificeret',
-        FORGOT_PASSWORD_QUESTION: 'Glemt adgangskode?',
+        FORGOT_PASSWORD_QUESTION: 'Glemt adgangskode?',l
         CREATE_ACCOUNT: 'Opret konto',
         USERNAME_OR_EMAIL: 'Brugernavn eller email',
         USERNAME: 'Brugernavn',
@@ -44,7 +44,7 @@ i18n.map('da_DK', {
     'User has no password set': 'Bruger har ikke nogen adgangskode',
     'Incorrect password': 'Forkert adgangskode',
     'Username already exists.': 'Brugernavn eksisterer allerede',
-    'Must be logged in': 'Skal være logegt ind',
+    'Must be logged in': 'Skal være logget ind',
     'Token expired': 'Token udløbet',
     'Token has invalid email address': 'Token har en ugyldig email adresse',
     'Invalid email': 'Ugyldig email',

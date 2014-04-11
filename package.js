@@ -25,7 +25,7 @@ Package.on_use(function (api) {
     'accounts_ui.styl',
     'i18n/en_US.js',
     'i18n/de_DE.js',
-    'i18n/da-DK.js'
+    'i18n/da_DK.js'
     ], 'client');
 });
 

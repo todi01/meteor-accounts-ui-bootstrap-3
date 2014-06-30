@@ -26,7 +26,8 @@ Package.on_use(function (api) {
     'i18n/en_US.js',
     'i18n/de_DE.js',
     'i18n/da_DK.js',
-    'i18n/nl_NL.js'
+    'i18n/nl_NL.js',
+    'i18n/nb_NO.js'
     ], 'client');
 });
 

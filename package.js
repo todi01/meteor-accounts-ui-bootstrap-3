@@ -2,7 +2,6 @@ Package.describe({
   summary: "Bootstrap styled version of login widgets with i18n",
   version: "1.1.8",
   git: "https://github.com/todi01/meteor-accounts-ui-bootstrap-3.git"
-  branch: "dev"
 });
 
 Package.onUse(function (api) {

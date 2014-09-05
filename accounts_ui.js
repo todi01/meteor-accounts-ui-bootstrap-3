@@ -8,6 +8,9 @@ if (!Accounts.ui._options) {
 	};
 }
 
+// set default language for i18n
+i18n.setDefaultLanguage('en_US');
+
 Accounts.ui.navigate = function (route, hash) {
 	// if router is iron-router
 	if(window.Router && _.isFunction(Router.go)) {

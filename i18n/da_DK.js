@@ -5,6 +5,7 @@ i18n.map('da_DK', {
         SIGN_OUT: 'Log ud',
         SIGN_IN_WITH: 'Log ind med',
         CONFIGURE: 'Konfigurere',
+        LOGIN: 'Login',
         SIGN_IN: 'Log ind',
         SIGN_UP: 'Register',
         OR: 'eller',

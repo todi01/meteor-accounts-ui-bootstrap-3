@@ -1,13 +1,11 @@
+<!-- vim:set ft=handlebars ts=2 sw=2: -->
 <template name="_loginButtonsLoggedOutSingleLoginButton">
-  <div class="login-text-and-button">
-    <div class="login-button single-login-button col-sm-12 {{#if configured}}btn btn-info {{else}}configure-button btn btn-danger{{/if}}" id="login-buttons-{{name}}">
-      <div class="login-image" id="login-buttons-image-{{name}}"></div>
-      {{#if configured}}
-        <span class="text-besides-image sign-in-text-{{name}}">{{i18n 'ACCOUNTS_UI.SIGN_IN_WITH'}} {{capitalizedName}}</span>
-      {{else}}
-        <span class="text-besides-image configure-text-{{name}}">{{i18n 'ACCOUNTS_UI.CONFIGURE'}} {{capitalizedName}} Login</span>
-      {{/if}}
-    </div>
+  <div class="navbar-form">
+    {{#if configured}}
+      <button class="login-button btn btn-block btn-{{capitalizedName}}">{{i18n 'ACCOUNTS_UI.SIGN_IN_WITH'}} {{capitalizedName}}</button>
+    {{else}}
+      <button class="login-button btn btn-block configure-button btn-danger">{{i18n 'ACCOUNTS_UI.CONFIGURE'}} {{capitalizedName}} {{i18n 'ACCOUNTS_UI.LOGIN'}}</button>
+    {{/if}}
   </div>
 </template>
 
@@ -18,10 +16,7 @@
 </template>
 
 <template name="_loginButtonsLoggedInSingleLogoutButton">
-  <div class="login-text-and-button">
-    <div class="login-display-name">
-      {{displayName}}
-    </div>
-    <div class="login-button single-login-button" id="login-buttons-logout">{{i18n 'ACCOUNTS_UI.SIGN_OUT'}}</div>
-  </div>
+  <li>
+    <a href="#" id="login-buttons-logout">{{displayName}} {i18n 'ACCOUNTS_UI.SIGN_OUT'}}</a>
+  </li>
 </template>

@@ -5,6 +5,7 @@ i18n.map('de_DE', {
         SIGN_OUT: 'Abmelden',
         SIGN_IN_WITH: 'Anmelden mit',
         CONFIGURE: 'Konfigurieren',
+        LOGIN: 'Login',
         SIGN_IN: 'Anmelden',
         SIGN_UP: 'Registrieren',
         OR: 'oder',

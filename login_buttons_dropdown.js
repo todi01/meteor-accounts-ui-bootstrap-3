@@ -6,10 +6,10 @@
     // events shared between loginButtonsLoggedOutDropdown and
     // loginButtonsLoggedInDropdown
     Template._loginButtons.events({
-        'click input, click label, click button, click .dropdown-menu, click .alert': function(event) {
+        'click input': function(event){
             event.stopPropagation();
         },
-        'click #login-name-link, click #login-sign-in-link': function() {
+        'click #login-name-link, click #login-sign-in-link': function(event) {
             event.stopPropagation();
             loginButtonsSession.set('dropdownVisible', true);
             Meteor.flush();
@@ -20,7 +20,7 @@
     });
 
     Template._loginButtons.toggleDropdown = function() {
-      toggleDropdown();
+        toggleDropdown();
     };
 
     //
@@ -72,11 +72,13 @@
     //
 
     Template._loginButtonsLoggedOutDropdown.events({
-        'click #login-buttons-password': function() {
+        'click #login-buttons-password': function(event) {
+            event.stopPropagation();
             loginOrSignup();
         },
 
         'keypress #forgot-password-email': function(event) {
+            event.stopPropagation();
             if (event.keyCode === 13)
                 forgotPassword();
         },
@@ -136,7 +138,8 @@
                 if (usernameOrEmail.indexOf('@') !== -1)
                     document.getElementById('forgot-password-email').value = usernameOrEmail;
         },
-        'click #back-to-login-link': function() {
+        'click #back-to-login-link': function(event) {
+            event.stopPropagation();
             loginButtonsSession.resetMessages();
 
             var username = trimmedElementValueById('login-username');
@@ -316,7 +319,6 @@
     //
     // loginButtonsChangePassword template
     //
-
     Template._loginButtonsChangePassword.events({
         'keypress #login-old-password, keypress #login-password, keypress #login-password-again': function(event) {
             if (event.keyCode === 13)
@@ -325,27 +327,33 @@
         'click #login-buttons-do-change-password': function(event) {
             event.stopPropagation();
             changePassword();
+        },
+        'click #login-buttons-cancel-change-password': function(event) {
+            event.stopPropagation();
+            loginButtonsSession.resetMessages();
+            Accounts._loginButtonsSession.set('inChangePasswordFlow', false);
+            Meteor.flush();
         }
     });
 
     Template._loginButtonsChangePassword.fields = function() {
         return [{
             fieldName: 'old-password',
-            fieldLabel: i18n('ACCOUNTS_UI.CURRENT_PASSWORD'),
+            fieldLabel: 'Current Password',
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password',
-            fieldLabel: i18n('ACCOUNTS_UI.NEW_PASSWORD'),
+            fieldLabel: 'New Password',
             inputType: 'password',
             visible: function() {
                 return true;
             }
         }, {
             fieldName: 'password-again',
-            fieldLabel: i18n('ACCOUNTS_UI.NEW_PASSWORD_AGAIN'),
+            fieldLabel: 'New Password (again)',
             inputType: 'password',
             visible: function() {
                 // No need to make users double-enter their password if
@@ -494,7 +502,7 @@
 
         Accounts.createUser(options, function(error) {
             if (error) {
-                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));
+                loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));loginButtonsSession.errorMessage(i18n(error.reason) || error.reason || i18n('ACCOUNTS_UI.ERROR_UNKNOWN'));
             } else {
                 loginButtonsSession.closeDropdown();
             }

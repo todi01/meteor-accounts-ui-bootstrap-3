@@ -5,6 +5,7 @@ i18n.map('nb_NO', {
         SIGN_OUT: 'Logg ut',
         SIGN_IN_WITH: 'Logg inn med',
         CONFIGURE: 'Konfigurere',
+        LOGIN: 'Login',
         SIGN_IN: 'Logg inn',
         SIGN_UP: 'Registrer',
         OR: 'eller',

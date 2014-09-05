@@ -5,6 +5,7 @@ i18n.map('nl_NL', {
         SIGN_OUT: 'Uitloggen',
         SIGN_IN_WITH: 'Log in met',
         CONFIGURE: 'Configureer',
+        LOGIN: 'Login',
         SIGN_IN: 'Aanmelden',
         SIGN_UP: 'Registreren',
         OR: 'Of',

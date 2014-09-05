@@ -42,14 +42,16 @@
   }
 
   Template._resetPasswordDialog.events({
-    'click #login-buttons-reset-password-button': function () {
+    'click #login-buttons-reset-password-button': function (event) {
+      event.stopPropagation();
       resetPassword();
     },
     'keypress #reset-password-new-password': function (event) {
       if (event.keyCode === 13)
         resetPassword();
     },
-    'click #login-buttons-cancel-reset-password': function () {
+    'click #login-buttons-cancel-reset-password': function (event) {
+      event.stopPropagation();
       loginButtonsSession.set('resetPasswordToken', null);
       Accounts._enableAutoLogin();
       $('#login-buttons-reset-password-modal').modal("hide");
@@ -139,6 +141,9 @@
   });
 
   Template._justVerifiedEmailDialog.visible = function () {
+    if (loginButtonsSession.get('justVerifiedEmail')){
+      setTimeout(function(){$('#login-buttons-email-address-verified-modal').modal()}, 500)
+    }
     return loginButtonsSession.get('justVerifiedEmail');
   };
 
@@ -169,8 +174,10 @@
   //
 
   Template._configureLoginServiceDialog.events({
-    'click .configure-login-service-dismiss-button': function () {
+    'click .configure-login-service-dismiss-button': function (event) {
+      event.stopPropagation();
       loginButtonsSession.set('configureLoginServiceDialogVisible', false);
+      $('#configure-login-service-dialog-modal').modal('hide');
     },
     'click #configure-login-service-dialog-save-configuration': function () {
       if (loginButtonsSession.get('configureLoginServiceDialogVisible') &&
@@ -192,6 +199,7 @@
             Meteor._debug("Error configuring login service " + serviceName, error);
           else
             loginButtonsSession.set('configureLoginServiceDialogVisible', false);
+            $('#configure-login-service-dialog-modal').modal('hide');
         });
       }
     },
@@ -240,7 +248,7 @@
 
   Template._configureLoginServiceDialog.configurationSteps = function () {
     // renders the appropriate template
-    return configureLoginServiceDialogTemplateForService()();
+    return configureLoginServiceDialogTemplateForService();
   };
 
   Template._configureLoginServiceDialog.saveDisabled = function () {

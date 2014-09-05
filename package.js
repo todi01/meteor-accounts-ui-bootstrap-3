@@ -1,15 +1,15 @@
 Package.describe({
-  summary: "Bootstrap styled version of login widgets"
+  summary: "Bootstrap styled version of login widgets",
+  version: "1.1.8",
+  git: "https://github.com/todi01/meteor-accounts-ui-bootstrap-3.git"
 });
 
 Package.on_use(function (api) {
-  api.use(['session', 'handlebars', 'stylus', 'accounts-base', 'underscore', 'templating', 'just-i18n'], 'client');
+  api.versionsFrom("METEOR@0.9.0");
+  api.use(['session', 'handlebars', 'stylus', 'accounts-base', 'underscore', 'templating', 'mrt:just-i18n'], 'client');
 
   api.add_files([
     'accounts_ui.js',
-
-    'login_buttons_images.css',
-    'login_buttons_dropdown.styl',
 
     'login_buttons.html',
     'login_buttons_single.html',

@@ -31,17 +31,23 @@ Example:
 
 ```html
 <div class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="#">Project name</a>
-  </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Link</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      {{> loginButtons }} <!-- here -->
-    </ul>
-  </div>
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">Project name</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Link</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			{{> loginButtons }} <!-- here -->
+		</ul>
+	</div>
 </div>
 ```
 
@@ -55,17 +61,17 @@ the corresponding events.
 
 ```html
 <template name="_loginButtonsAdditionalLoggedInDropdownActions">
-  <button class="btn btn-default btn-block" id="login-buttons-edit-profile">Edit profile</button>
+	<button class="btn btn-default btn-block" id="login-buttons-edit-profile">Edit profile</button>
 </template>
 ```
 
 ```javascript
 Template._loginButtonsLoggedInDropdown.events({
-  'click #login-buttons-edit-profile': function(event) {
-    event.stopPropagation();
-    Template._loginButtons.toggleDropdown();
-    Router.go('profileEdit');
-  }
+	'click #login-buttons-edit-profile': function(event) {
+		event.stopPropagation();
+		Template._loginButtons.toggleDropdown();
+		Router.go('profileEdit');
+	}
 });
 ```
 

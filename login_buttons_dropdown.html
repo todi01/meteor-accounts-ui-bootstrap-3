@@ -1,3 +1,4 @@
+<!-- vim:set ft=handlebars: -->
 <!--           -->
 <!-- LOGGED IN -->
 <!--           -->
@@ -5,6 +6,9 @@
   <li id="login-dropdown-list" class="dropdown">
     <a class="dropdown-toggle"  data-toggle="dropdown">
       {{displayName}}
+      {{#with user_profile_picture}}
+        <img src="{{this}}" width="30px" class="img-circular" alt="#" />
+      {{/with}}
       <b class="caret"></b>
     </a>
     <div class="dropdown-menu col-sm-3">
@@ -38,10 +42,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
   <li id="login-dropdown-list" class="dropdown">
-    <a class="dropdown-toggle"  data-toggle="dropdown">
-      {{i18n 'ACCOUNTS_UI.SIGN_IN'}}{{#unless forbidClientAccountCreation}} / {{i18n 'ACCOUNTS_UI.SIGN_UP'}}{{/unless}}
-      <b class="caret"></b>
-    </a>
+    <a class="dropdown-toggle"  data-toggle="dropdown">{{i18n 'ACCOUNTS_UI.SIGN_IN'}}{{#unless forbidClientAccountCreation}} / {{i18n 'ACCOUNTS_UI.SIGN_UP'}}{{/unless}}<b class="caret"></b></a>
     <div class="dropdown-menu">
       {{> _loginButtonsLoggedOutAllServices}}
     </div>
@@ -130,5 +131,5 @@
     {{> _loginButtonsFormField}}
   {{/each}}
   <button class="btn btn-primary" id="login-buttons-do-change-password">{{i18n 'ACCOUNTS_UI.CHANGE_PASSWORD'}}</button>
-  <button class="btn btn-default login-close">{{i18n 'ACCOUNTS_UI.CLOSE'}}</button>
+  <button class="btn btn-default" id="login-buttons-cancel-change-password">{{i18n 'ACCOUNTS_UI.CANCEL'}}</button>
 </template>

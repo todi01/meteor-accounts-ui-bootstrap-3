@@ -1,7 +1,10 @@
 #login-dropdown-list
 	.dropdown-menu
-		width:	300px;
+		min-width:	300px;
 		padding: 15px;
+		.or
+			margin: 5px 0;
+			text-align: center;
 
 #login-dropdown-list
 	#forgot-password-link
@@ -12,23 +15,22 @@
 		margin-top: 5px;
 
 	input
-		margin:0px
-		border-radius:0px;
+		margin:0 0 -1px
+		border-radius: 0px;
 
 	input:first-of-type
-		margin-top:0px;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 
 	input:last-of-type
-		margin-bottom:5px;
+		margin-bottom: 5px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 
 .modal-backdrop
 	opacity: 0.75;
 
-#login-buttons-reset-password-modal, #login-buttons-enroll-account-modal
+#login-buttons-reset-password-modal, #login-buttons-enroll-account-modal, #login-buttons-email-address-verified-modal
 	.modal-content
 		margin-top: 30%;
 
@@ -55,3 +57,16 @@
 	position: fixed;
 	left: 50%;
 	margin-left: -300px;
+
+.btn-Facebook{
+	color: white;
+	background-color: #3B5998;
+}
+.btn-Google{
+	color: white;
+	background-color: #D34836;
+}
+.btn-Twitter{
+	color: white;
+	background-color: #4099FF;
+}

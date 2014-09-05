@@ -1,10 +1,11 @@
 Package.describe({
-  summary: "Bootstrap styled version of login widgets",
+  summary: "Bootstrap styled version of login widgets with i18n",
   version: "1.1.8",
   git: "https://github.com/todi01/meteor-accounts-ui-bootstrap-3.git"
+  branch: "dev"
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
   api.versionsFrom("METEOR@0.9.0");
   api.use(['session', 'handlebars', 'stylus', 'accounts-base', 'underscore', 'templating', 'mrt:just-i18n'], 'client');
 
